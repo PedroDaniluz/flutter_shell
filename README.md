@@ -13,7 +13,7 @@ Para futuras equipes de desenvolvimento, entendo o desafio de trabalhar com cód
 Sou aluno do curso de Engenharia de Computação na FIAP. Meu envolvimento com a programação começou no início de 2023, e desde então, desenvolvi uma paixão por este campo. Li inúmeros livros e dediquei horas de estudo para aprimorar minhas habilidades. Para este aplicativo, baseei-me na minha formação Flutter na Alura(c) e no livro "Código Limpo" de Robert C. Martin.
 <br><br>
 <strong></b>Maria Eduarda Goda:</strong>
-Sou aluna do curso de Engenharia de Computação na FIAP. Iniciei minha jornada na programação no ensino médio, entre 2020 e 2022. Tenho grande interesse em tudo que envolve tecnologia e procuro me dedicar ao máximo em todos os projetos que participo.
+Sou estudante de Engenharia de Computação na FIAP. Comecei a programar no ensino médio, entre 2020 e 2022. Tenho muito interesse em tecnologia e me dedico ao máximo em todos os projetos que participo, contribuindo ativamente tanto na parte burocrática quanto na criativa.
 <br><br>
 <strong></b>Henriques Soares:</strong>
 Sou aluno do curso de Engenharia de Computação na FIAP. Participei ativamente do desenvolvimento deste projeto liderado por Pedro Daniluz. Contribuí para o sucesso do aplicativo, oferecendo suporte e expertise no desenvolvimento e integração das funções responsáveis pela persistência de dados e na lógica de registro de manutenções. Nossa parceria foi essencial para implementar com sucesso essa importante parte do projeto.
