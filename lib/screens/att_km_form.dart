@@ -37,13 +37,11 @@ class _FormKmAttState extends State<FormKmAtt> {
   @override
   Widget build(BuildContext context) {
     final carData = Provider.of<CarSpecs>(context);
-    double screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     return Form(
       key: _formKey,
       child: Scaffold(
-        appBar: AppBar(
-            title: const Text('Atualizar Quilometragem')),
+        appBar: AppBar(title: const Text('Atualizar Quilometragem')),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -92,9 +90,6 @@ class _FormKmAttState extends State<FormKmAtt> {
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                backgroundColor: CustomColors.whiteLess,
-                fixedSize: Size(screenWidth / 1.1, screenHeight / 18)),
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 CarDao().save(CarSpecs(

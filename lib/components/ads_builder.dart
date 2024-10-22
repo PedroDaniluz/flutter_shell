@@ -13,9 +13,14 @@ class AdsBuilder extends StatelessWidget {
     return InkWell(
       child: ClipRRect(
         borderRadius: BorderRadius.circular(12),
-        child: Image.asset(image, fit: BoxFit.fill,),
+        child: Image.asset(
+          image,
+          fit: BoxFit.fill,
+        ),
       ),
-      onTap: () {launchUrl(Uri.parse(link));},
+      onTap: () {
+        launchUrl(Uri.parse(link));
+      },
     );
   }
 }

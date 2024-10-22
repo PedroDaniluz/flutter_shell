@@ -16,7 +16,7 @@ class MaintenanceHistory extends ChangeNotifier {
     this.oilBreak = '',
     this.oilEngine = '',
     this.sparkplug = '',
-});
+  });
 
   String alignment;
   String balancing;

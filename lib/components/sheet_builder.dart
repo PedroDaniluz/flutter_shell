@@ -36,7 +36,7 @@ class SheetCaller1 extends StatelessWidget {
             context: context,
             builder: (BuildContext context) {
               return SizedBox(
-                height: screenHeight/1.6,
+                height: screenHeight / 1.6,
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
@@ -117,7 +117,7 @@ class SheetCaller2 extends StatelessWidget {
             context: context,
             builder: (BuildContext context) {
               return SizedBox(
-                height: screenHeight/1.6,
+                height: screenHeight / 1.6,
                 child: SingleChildScrollView(
                   child: Column(
                     children: [
@@ -224,7 +224,7 @@ class SheetCaller3 extends StatelessWidget {
             context: context,
             builder: (BuildContext context) {
               return SizedBox(
-                height: screenHeight/1.6,
+                height: screenHeight / 1.6,
                 child: SingleChildScrollView(
                   child: Column(
                     children: [

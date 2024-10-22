@@ -35,12 +35,12 @@ class _ButtonTabState extends State<ButtonTab> {
           child: Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(left: screenWidth/17),
+                padding: EdgeInsets.only(left: screenWidth / 17),
                 child: Text(
                   'Condição do Veículo',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: screenWidth/18,
+                      fontSize: screenWidth / 18,
                       color: CustomColors.purpleShell,
                       fontFamily: 'Futura',
                       decoration: TextDecoration.none),
@@ -50,7 +50,8 @@ class _ButtonTabState extends State<ButtonTab> {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(bottom: 15, left: screenWidth/18, right: screenWidth/18),
+          padding: EdgeInsets.only(
+              bottom: 15, left: screenWidth / 18, right: screenWidth / 18),
           child: Container(
             height: 2.5,
             color: CustomColors.purpleShell,
@@ -69,30 +70,52 @@ class _ButtonTabState extends State<ButtonTab> {
                   backgroundColor: CustomColors.whiteBack,
                   onPressed: () {
                     showModalBottomSheet(
-                      isScrollControlled: true,
+                        isScrollControlled: true,
                         context: context,
                         builder: (BuildContext context) {
                           return SizedBox(
-                            height: screenHeight/1.6,
+                            height: screenHeight / 1.6,
                             // OutdatedBuilder() constroi no bottomSheet a informação
                             // que a manutenção está vencida, caso esteja. Recebe
                             // todas as informações de manutenção e a KM do veículo
                             child: OutdatedBuilder(
-                                currentKm:
-                                    int.parse(carData.carKm),
-                                alignmentData: context.watch<MaintenanceHistory>().alignment,
-                                balancingData: context.watch<MaintenanceHistory>().balancing,
-                                camberData: context.watch<MaintenanceHistory>().camber,
-                                batteryData: context.watch<MaintenanceHistory>().battery,
-                                breaksData: context.watch<MaintenanceHistory>().breaks,
-                                fronttiresData: context.watch<MaintenanceHistory>().fronttires,
-                                backtiresData: context.watch<MaintenanceHistory>().backtires,
-                                filterairData: context.watch<MaintenanceHistory>().filterair,
-                                filterfuelData: context.watch<MaintenanceHistory>().filterfuel,
-                                filteroilData: context.watch<MaintenanceHistory>().filteroil,
-                                oilbreakData: context.watch<MaintenanceHistory>().oilBreak,
-                                oilengineData: context.watch<MaintenanceHistory>().oilEngine,
-                                sparkplugData: context.watch<MaintenanceHistory>().sparkplug),
+                                currentKm: int.parse(carData.carKm),
+                                alignmentData: context
+                                    .watch<MaintenanceHistory>()
+                                    .alignment,
+                                balancingData: context
+                                    .watch<MaintenanceHistory>()
+                                    .balancing,
+                                camberData:
+                                    context.watch<MaintenanceHistory>().camber,
+                                batteryData:
+                                    context.watch<MaintenanceHistory>().battery,
+                                breaksData:
+                                    context.watch<MaintenanceHistory>().breaks,
+                                fronttiresData: context
+                                    .watch<MaintenanceHistory>()
+                                    .fronttires,
+                                backtiresData: context
+                                    .watch<MaintenanceHistory>()
+                                    .backtires,
+                                filterairData: context
+                                    .watch<MaintenanceHistory>()
+                                    .filterair,
+                                filterfuelData: context
+                                    .watch<MaintenanceHistory>()
+                                    .filterfuel,
+                                filteroilData: context
+                                    .watch<MaintenanceHistory>()
+                                    .filteroil,
+                                oilbreakData: context
+                                    .watch<MaintenanceHistory>()
+                                    .oilBreak,
+                                oilengineData: context
+                                    .watch<MaintenanceHistory>()
+                                    .oilEngine,
+                                sparkplugData: context
+                                    .watch<MaintenanceHistory>()
+                                    .sparkplug),
                           );
                         });
                   },
@@ -133,7 +156,6 @@ class _ButtonTabState extends State<ButtonTab> {
             ),
             Column(
               children: [
-
                 // Basicamente, ele constroi o conteudo do BottomSheet, utilizando
                 // as informações de manutenção e a distância para a próxima mantenção.
                 // Esse context.watch() é uma função do provider, para atualizar

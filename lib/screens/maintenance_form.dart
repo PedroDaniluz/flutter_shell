@@ -65,14 +65,13 @@ class _FormMaintenanceState extends State<FormMaintenance> {
     return Form(
       key: _formKey,
       child: Scaffold(
-        appBar: AppBar(
-            title: const Text('Agendar Manutenção')),
+        appBar: AppBar(title: const Text('Agendar Manutenção')),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.only(left: screenWidth/25, top: 45),
+                padding: EdgeInsets.only(left: screenWidth / 25, top: 45),
                 child: const Text(
                   'Agendamento',
                   style: TextStyle(
@@ -82,7 +81,8 @@ class _FormMaintenanceState extends State<FormMaintenance> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 15, horizontal: screenWidth/25),
+                padding: EdgeInsets.symmetric(
+                    vertical: 15, horizontal: screenWidth / 25),
                 child: TextFormField(
                   cursorColor: CustomColors.purpleShell,
                   keyboardType: TextInputType.name,
@@ -107,7 +107,8 @@ class _FormMaintenanceState extends State<FormMaintenance> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 15, horizontal: screenWidth/25),
+                padding: EdgeInsets.symmetric(
+                    vertical: 15, horizontal: screenWidth / 25),
                 child: TextFormField(
                   cursorColor: CustomColors.purpleShell,
                   keyboardType: TextInputType.number,
@@ -133,7 +134,8 @@ class _FormMaintenanceState extends State<FormMaintenance> {
               ),
               Center(
                 child: Padding(
-                    padding: EdgeInsets.symmetric(vertical: 15, horizontal: screenWidth/25),
+                    padding: EdgeInsets.symmetric(
+                        vertical: 15, horizontal: screenWidth / 25),
                     child: ValueListenableBuilder(
                       valueListenable: maintenanceNameController,
                       builder: (BuildContext context, String value, _) {
@@ -174,16 +176,13 @@ class _FormMaintenanceState extends State<FormMaintenance> {
                     )),
               ),
               SizedBox(
-                height: screenHeight/10,
+                height: screenHeight / 10,
               )
             ],
           ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                backgroundColor: CustomColors.whiteLess,
-                fixedSize: Size(screenWidth/1.1, screenHeight/18)),
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 Navigator.pop(context);

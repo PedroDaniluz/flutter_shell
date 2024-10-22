@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_shell/repository/car_dao.dart';
 
 class CarSpecs extends ChangeNotifier {
-  CarSpecs({this.carName = '',
-    this.carBrand = '',
-    this.carKm = '0',
-    this.carYear = 'Registre as informações do veículo'});
+  CarSpecs(
+      {this.carName = '',
+      this.carBrand = '',
+      this.carKm = '0',
+      this.carYear = 'Registre as informações do veículo'});
 
   final carDao = CarDao();
 

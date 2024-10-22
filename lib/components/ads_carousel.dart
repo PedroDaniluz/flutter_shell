@@ -16,15 +16,18 @@ class AdsCarousel extends StatelessWidget {
       ),
       const AdsBuilder(
         image: 'assets/images/ad_porto_habitos.png',
-        link: 'https://blog.portoseguro.com.br/12-habitos-ao-dirigir-que-aumentam-o-consumo-de-combustivel',
+        link:
+            'https://blog.portoseguro.com.br/12-habitos-ao-dirigir-que-aumentam-o-consumo-de-combustivel',
       ),
       const AdsBuilder(
         image: 'assets/images/ad_porto_tempo.png',
-        link: 'https://blog.portoseguro.com.br/de-quanto-em-quanto-tempo-deve-se-fazer-a-revisao-do-carro',
+        link:
+            'https://blog.portoseguro.com.br/de-quanto-em-quanto-tempo-deve-se-fazer-a-revisao-do-carro',
       ),
       const AdsBuilder(
         image: 'assets/images/ad_shell_vp.png',
-        link: 'https://www.shell.com.br/motoristas/combustiveis/shell-v-power.html',
+        link:
+            'https://www.shell.com.br/motoristas/combustiveis/shell-v-power.html',
       ),
     ];
 

@@ -19,26 +19,33 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
     return MaterialApp(
         title: 'Commander',
         theme: ThemeData(
-          scaffoldBackgroundColor: CustomColors.whiteBack,
-          primarySwatch: Colors.yellow,
-          appBarTheme: const AppBarTheme(
-              iconTheme: IconThemeData(color: Colors.black),
-              backgroundColor: CustomColors.whiteBack,
-              titleTextStyle: TextStyle(
-                  fontSize: 18,
-                  color: Colors.black,
-                  fontFamily: 'Futura',
-                  decoration: TextDecoration.none)),
-          bottomSheetTheme: const BottomSheetThemeData(
-              backgroundColor: CustomColors.whiteBack,
-              clipBehavior: Clip.antiAliasWithSaveLayer,
-              shape: RoundedRectangleBorder(
-                  borderRadius:
-                      BorderRadius.vertical(top: Radius.circular(30)))),
-        ),
+            scaffoldBackgroundColor: CustomColors.whiteBack,
+            primarySwatch: Colors.yellow,
+            appBarTheme: const AppBarTheme(
+                iconTheme: IconThemeData(color: Colors.black),
+                backgroundColor: CustomColors.whiteBack,
+                titleTextStyle: TextStyle(
+                    fontSize: 18,
+                    color: Colors.black,
+                    fontFamily: 'Futura',
+                    decoration: TextDecoration.none)),
+            bottomSheetTheme: const BottomSheetThemeData(
+                backgroundColor: CustomColors.whiteBack,
+                clipBehavior: Clip.antiAliasWithSaveLayer,
+                shape: RoundedRectangleBorder(
+                    borderRadius:
+                        BorderRadius.vertical(top: Radius.circular(30)))),
+            elevatedButtonTheme: ElevatedButtonThemeData(
+                style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10)),
+                    backgroundColor: CustomColors.whiteLess,
+                    fixedSize: Size(screenWidth / 1.1, screenHeight / 18)))),
         home: const InitialScreen());
   }
 }

@@ -231,9 +231,6 @@ class _FormHistoryState extends State<FormHistory> {
           floatingActionButtonLocation:
               FloatingActionButtonLocation.centerFloat,
           floatingActionButton: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: CustomColors.whiteLess,
-                  fixedSize: Size(screenWidth / 1.1, screenHeight / 18)),
               onPressed: () {
                 final List<String> listAdd = [
                   maintenanceNameController.value,

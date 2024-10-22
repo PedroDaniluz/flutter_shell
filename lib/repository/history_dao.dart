@@ -86,7 +86,7 @@ class HistDao {
   Future<List<MaintenanceHistory>> findAll() async {
     final Database historyDatabase = await getDatabase();
     final List<Map<String, dynamic>> result =
-    await historyDatabase.query(_tablename);
+        await historyDatabase.query(_tablename);
     return toList(result);
   }
 }

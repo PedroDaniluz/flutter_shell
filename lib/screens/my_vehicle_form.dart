@@ -68,14 +68,13 @@ class _FormVehicleState extends State<FormVehicle> {
     return Form(
       key: _formKey,
       child: Scaffold(
-        appBar: AppBar(
-            title: const Text('Cadastrar Veículo')),
+        appBar: AppBar(title: const Text('Cadastrar Veículo')),
         body: SingleChildScrollView(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.only(left: screenWidth/25, top: 45),
+                padding: EdgeInsets.only(left: screenWidth / 25, top: 45),
                 child: const Text(
                   'Dados do Veículo',
                   style: TextStyle(
@@ -85,7 +84,8 @@ class _FormVehicleState extends State<FormVehicle> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 15, horizontal: screenWidth/25),
+                padding: EdgeInsets.symmetric(
+                    vertical: 15, horizontal: screenWidth / 25),
                 child: TextFormField(
                   cursorColor: CustomColors.purpleShell,
                   keyboardType: TextInputType.name,
@@ -110,7 +110,8 @@ class _FormVehicleState extends State<FormVehicle> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 15, horizontal: screenWidth/25),
+                padding: EdgeInsets.symmetric(
+                    vertical: 15, horizontal: screenWidth / 25),
                 child: TextFormField(
                   cursorColor: CustomColors.purpleShell,
                   keyboardType: TextInputType.name,
@@ -134,7 +135,8 @@ class _FormVehicleState extends State<FormVehicle> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 15, horizontal: screenWidth/25),
+                padding: EdgeInsets.symmetric(
+                    vertical: 15, horizontal: screenWidth / 25),
                 child: TextFormField(
                   cursorColor: CustomColors.purpleShell,
                   keyboardType: TextInputType.number,
@@ -157,7 +159,8 @@ class _FormVehicleState extends State<FormVehicle> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.symmetric(vertical: 15, horizontal: screenWidth/25),
+                padding: EdgeInsets.symmetric(
+                    vertical: 15, horizontal: screenWidth / 25),
                 child: TextFormField(
                   cursorColor: CustomColors.purpleShell,
                   keyboardType: TextInputType.number,
@@ -182,16 +185,13 @@ class _FormVehicleState extends State<FormVehicle> {
                 ),
               ),
               SizedBox(
-                height: screenHeight/10,
+                height: screenHeight / 10,
               )
             ],
           ),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton: ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                backgroundColor: CustomColors.whiteLess,
-                fixedSize: Size(screenWidth/1.1, screenHeight/18)),
             onPressed: () {
               if (_formKey.currentState!.validate()) {
                 CarDao().save(CarSpecs(

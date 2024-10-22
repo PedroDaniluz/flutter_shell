@@ -15,7 +15,6 @@ class InitialScreen extends StatefulWidget {
 
 class _InitialScreenState extends State<InitialScreen> {
   @override
-
   // Chamamos a função loadDataFromDatabase em initState para inicializar o app
   // com todos os dados salvos no database chamado nesse provider.
   void initState() {
@@ -23,6 +22,7 @@ class _InitialScreenState extends State<InitialScreen> {
     final carData = Provider.of<CarSpecs>(context, listen: false);
     carData.loadDataFromDatabase();
   }
+
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -48,7 +48,7 @@ class _InitialScreenState extends State<InitialScreen> {
                     '${context.watch<CarSpecs>().carBrand} ${context.watch<CarSpecs>().carName}',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        fontSize: screenWidth/14,
+                        fontSize: screenWidth / 14,
                         color: CustomColors.purpleShell,
                         fontFamily: 'Futura',
                         decoration: TextDecoration.none),
@@ -58,7 +58,7 @@ class _InitialScreenState extends State<InitialScreen> {
                   context.watch<CarSpecs>().carYear,
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                      fontSize: screenWidth/30,
+                      fontSize: screenWidth / 30,
                       color: CustomColors.purpleShell,
                       fontFamily: 'Futura',
                       decoration: TextDecoration.none),
@@ -75,7 +75,7 @@ class _InitialScreenState extends State<InitialScreen> {
             // Esses SizedBox() que aparecem ao longo do código servem para
             // ocupar um espaço, permitindo que o scroll vá mais longe
             SizedBox(
-              height: screenHeight/20,
+              height: screenHeight / 20,
             ),
           ],
         ),

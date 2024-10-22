@@ -64,7 +64,7 @@ class SheetContent extends StatelessWidget {
                   borderRadius: BorderRadius.circular(15)),
               child: Container(
                 height: 65,
-                width: screenWidth/1.1,
+                width: screenWidth / 1.1,
                 decoration: BoxDecoration(
                     color: CustomColors.whiteLess,
                     borderRadius: BorderRadius.circular(15)),
@@ -115,7 +115,10 @@ class HistoryHead extends StatelessWidget {
         children: [
           Text('Última Manutenção',
               style: TextStyle(fontSize: 20, color: CustomColors.purpleShell)),
-          Icon(Icons.history, color: CustomColors.purpleShell,)
+          Icon(
+            Icons.history,
+            color: CustomColors.purpleShell,
+          )
         ],
       ),
     );
@@ -147,7 +150,7 @@ class History extends StatelessWidget {
         elevation: 8,
         child: Container(
           height: 65,
-          width: screenWidth/1.1,
+          width: screenWidth / 1.1,
           decoration: BoxDecoration(
               color: CustomColors.whiteLess,
               borderRadius: BorderRadius.circular(15)),
@@ -204,13 +207,14 @@ class History extends StatelessWidget {
 // se a manutenção está vencida, com base na quilometragem atual ou data atual e na validade da
 // manutenção em KM ou Tempo
 class OutdatedParts extends StatelessWidget {
-  const OutdatedParts(
-      {super.key,
-      required this.histData,
-      this.currentKm = 0,
-      this.isDateBased = false,
-      this.distToNew = 0,
-      this.yearsToNew = 0,});
+  const OutdatedParts({
+    super.key,
+    required this.histData,
+    this.currentKm = 0,
+    this.isDateBased = false,
+    this.distToNew = 0,
+    this.yearsToNew = 0,
+  });
 
   final String histData;
   final int currentKm;
@@ -246,16 +250,14 @@ class OutdatedParts extends StatelessWidget {
         ? (isOutdated()) // Se estiver vencido na data:
             ? SheetContent(
                 forecast: false,
-                ballonText:
-                    '"${histData.split(', ')[0]}" Vencido',
+                ballonText: '"${histData.split(', ')[0]}" Vencido',
                 ballonForecast: '',
               )
             : const SizedBox.shrink() // Senão:
         : (isOutdatedKM()) // Senão, Se estiver vencido no Km:
             ? SheetContent(
                 forecast: false,
-                ballonText:
-                '"${histData.split(', ')[0]}" Vencido',
+                ballonText: '"${histData.split(', ')[0]}" Vencido',
                 ballonForecast: '',
               )
             : const SizedBox.shrink(); // Senão:

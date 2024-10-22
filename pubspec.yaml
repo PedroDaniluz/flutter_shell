@@ -14,7 +14,7 @@ dependencies:
   intl: ^0.18.1
   sqflite: ^2.3.0
   path: ^1.8.3
-  carousel_slider: ^4.2.1
+  carousel_slider: ^5.0.0
   url_launcher: ^6.1.14
 
   cupertino_icons: ^1.0.2
